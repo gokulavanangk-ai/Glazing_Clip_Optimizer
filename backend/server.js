@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 const cors = require("cors");
@@ -8,11 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 5000;
-const JWT_SECRET = "glazing_clip_secret_key_2024";
+const PORT = process.env.PORT || 5000;
+const JWT_SECRET = process.env.JWT_SECRET || "glazing_clip_secret_key_2024";
 
-const MONGO_URL =
-  "mongodb+srv://gokulavanangk_db_user:kdGF99CgnQFpQqqn@cluster0.kcs7vse.mongodb.net/glassing_optimizer?retryWrites=true&w=majority";
+const MONGO_URL = process.env.MONGO_URL;
 
 let db;
 

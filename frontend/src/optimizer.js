@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "./context/AuthContext";
 
-const API = "http://localhost:5000";
+import { API } from "./config";
 
 function Optimizer() {
   const { authHeader } = useAuth();

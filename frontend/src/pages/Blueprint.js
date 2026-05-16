@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 
-const API = "http://localhost:5000";
+import { API } from "../config";
 
 // Colour palette for cut pieces
 const PIECE_COLORS = [

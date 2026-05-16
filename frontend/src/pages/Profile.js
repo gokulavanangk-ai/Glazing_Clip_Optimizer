@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 
-const API = "http://localhost:5000";
+import { API } from "../config";
 
 export default function Profile() {
   const { user, authHeader, isAdmin } = useAuth();
